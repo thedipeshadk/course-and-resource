@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/courseDetail.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation div">
+        <div class="logo">Logo</div>
+        <ul class="lists">
+          <a href="#"><li>Go Home</li></a>
+          <a href="#"><li>Course</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+        <div class="profile-pic">..</div>
+      </nav>
+    </header>
+
+    <div class="card-container div">
+      <% courses.forEach(course => { %>
+      <div class="card">
+        <img src="<%= course.resource %>" alt="Course Image" />
+        <div class="card-body">
+          <h5 class="card-title"><%= course.name %></h5>
+          <p class="card-text">
+            <strong>Code:</strong> <%= course.code %><br />
+            <strong>Instructor:</strong> <%= course.instructor %><br />
+            <strong>Price:</strong> $<%= course.price %><br />
+            <strong>Rating:</strong> <%= course.rating %> / 5
+          </p>
+          <a href="/eachCourse/<%= course.code %>" class="btn">Learn More</a>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+
+    <footer class="edu-footer">
+      <div class="container">
+        <div class="edu-footer-top">
+          <div class="edu-about">
+            <h4>About Us</h4>
+            <p>
+              Empowering learners worldwide with quality educational content and
+              resources.
+            </p>
+          </div>
+          <div class="edu-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/courses">Courses</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="edu-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Email:
+              <a href="mailto:support@eduwebsite.com">support@eduwebsite.com</a>
+            </p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <div class="edu-socials">
+              <a href="#" class="social-icon">🔗</a>
+              <a href="#" class="social-icon">📘</a>
+              <a href="#" class="social-icon">🐦</a>
+              <a href="#" class="social-icon">📸</a>
+            </div>
+          </div>
+        </div>
+        <div class="edu-footer-bottom">
+          <p>&copy; 2024 EduWebsite. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

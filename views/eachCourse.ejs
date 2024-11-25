@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/courseDetail.css" />
+    <title><%= course.name %> Details</title>
+  </head>
+  <body>
+    <div class="vid-container">
+      <aside class="vid-aside">
+        <div class="video" style="display: flex; justify-content: center">
+          <%- course.resource %>
+        </div>
+        <div class="video-desc">
+          <h3><%= course.name %></h3>
+          <p>
+            <strong>Instructor:</strong> <%= course.instructor %><br />
+            <strong>Code:</strong> <%= course.code %><br />
+            <strong>Price:</strong> $<%= course.price %><br />
+            <strong>Rating:</strong> <%= course.rating %> / 5
+          </p>
+        </div>
+      </aside>
+
+      <div class="other-videos">
+        <h3>Suggested Videos</h3>
+        <% courses.forEach((c) => { %> <% if (c.code !== course.code) { %>
+        <div class="other-cards">
+          <div class="card-box">
+            <img src="/path/to/placeholder.jpg" alt="<%= c.name %>" />
+            <div class="card-body">
+              <h5 class="card-title"><%= c.name %></h5>
+              <a href="/eachCourse/<%= c.code %> %>" class="btn"
+                >View Course &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+        <% } %> <% }); %>
+      </div>
+    </div>
+  </body>
+</html>

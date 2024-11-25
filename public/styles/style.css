@@ -1,0 +1,80 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+/* Header and Navigation Bar Styling */
+header {
+  background-color: #6c7ae0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+header p {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #e4e4e4;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #4a57e6;
+  text-align: center;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+nav a:hover {
+  background-color: #3b47c6;
+}
+
+/* Table Styling */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+}
+th {
+  background-color: #6c7ae0;
+  color: white;
+}
+td {
+  border-bottom: 1px solid #ddd;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #e9eff5;
+}
+
+h2 {
+  text-align: center;
+  color: #6c7ae0;
+  font-size: 24px;
+  margin-top: 0;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */

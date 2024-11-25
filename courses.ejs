@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/courseDetail.css" />
+    <title>EduQuest</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation div">
+        <div class="logo">Logo</div>
+        <ul class="lists">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Course</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+        <div class="profile-pic">Admin</div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="course-lists div">
+        <% for(let i =0; i<courses.length; i++) {%>
+          <div class="card">
+            <img src="your-image.jpg" alt="Resource Image" />
+            <div class="card-body">
+              <h5 class="card-title">Resource Title</h5>
+              <p class="card-text">
+                <strong>Category:</strong> Programming<br />
+                <strong>Author:</strong> A brief 
+              </p>
+              <div class="rating">⭐⭐⭐⭐☆</div>
+              <a href="your-link.html" class="btn">Learn More</a>
+            </div>
+          </div>
+        <% } %>
+      </section>
+    </main>
+
+    <footer>copyright &copy;cationEdu</footer>
+  </body>
+</html>
